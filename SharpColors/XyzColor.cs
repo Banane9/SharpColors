@@ -7,19 +7,24 @@ namespace SharpColors
     public struct XyzColor : IColor<XyzColor>
     {
         /// <summary>
-        /// Contains the maximum value for the X component. 95.047
+        /// Contains the maximum value for the X component. 95.05
         /// </summary>
-        public const float MaxX = 95.047f;
+        public const float MaxX = 95.05f;
 
         /// <summary>
-        /// Contains the maximum value for the Y component. 100.000
+        /// Contains the maximum value for the Y component. 100
         /// </summary>
         public const float MaxY = 100f;
 
         /// <summary>
-        /// Contains the maximum value for the Z component. 108.883
+        /// Contains the maximum value for the Z component. 108.9
         /// </summary>
-        public const float MaxZ = 108.883f;
+        public const float MaxZ = 108.9f;
+
+        public static XyzColor White
+        {
+            get { return new XyzColor(95.05f, 100f, 108.9f); }
+        }
 
         /// <summary>
         /// Gets the X component of the color. Range from 0 to MaxX
